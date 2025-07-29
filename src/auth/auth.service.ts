@@ -29,7 +29,7 @@ export class AuthService extends PrismaClient implements OnModuleInit {
                 });
             }
 
-            const newUser = this.user.create({
+            const newUser = await this.user.create({
                 data: {
                     email,
                     password,
